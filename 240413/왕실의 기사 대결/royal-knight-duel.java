@@ -110,7 +110,7 @@ public class Main {
 			tr -= 1;
 
 			for (int gap = 0; gap < klist[now].w; gap++) {
-				if (tc + gap <= 0 || tc + gap > l) {
+				if (tr <= 0  || tr > l || tc + gap <= 0 || tc + gap > l) {
 					moving.clear();
 					return false;
 				}
@@ -129,7 +129,7 @@ public class Main {
 			tc += klist[now].w;
 
 			for (int gap = 0; gap < klist[now].h; gap++) {
-				if (tr + gap <= 0 || tr + gap > l){
+				if (tr + gap <= 0 || tr + gap > l || tc <= 0 || tc > l){
 					moving.clear();
 					return false;
 				}
@@ -147,7 +147,7 @@ public class Main {
 			tr += klist[now].h;
 
 			for (int gap = 0; gap < klist[now].w; gap++) {
-				if (tc + gap <= 0 || tc + gap > l) {
+				if (tr <= 0  || tr > l || tc + gap <= 0 || tc + gap > l) {
 					moving.clear();
 					return false;
 				}
@@ -166,7 +166,7 @@ public class Main {
 			tc -= 1;
 
 			for (int gap = 0; gap < klist[now].h; gap++) {
-				if (tr + gap <= 0 || tr + gap > l) {
+				if (tr + gap <= 0 || tr + gap > l || tc <= 0 || tc > l) {
 					moving.clear();
 					return false;
 				}
