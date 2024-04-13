@@ -103,7 +103,6 @@ public class Main {
 
 	static boolean dfs(int now, int dir) {
 		moving.add(now);
-		
 		int tr = klist[now].r;
 		int tc = klist[now].c;
 		if (dir == 0) {
